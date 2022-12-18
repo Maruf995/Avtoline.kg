@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <meta charset="UTF-8">
+    <title>My Beautiful BLog</title>
+</head>
+
+<body>
+    <div>
+        <ul style="list-style: none; text-align: center">
+            {% for i in shino %}
+            <li>
+                <div>
+                    <p>
+                        <a href="tire_fitting/"><img src="{{ i.image.url }}" style="width: 600px; height: 500px"
+                                alt=""></a>
+                    <h1>{{ i.title }}</h1>
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+            {% for i in balans %}
+            <li>
+                <div>
+                    <p>
+                        <a href="balans/"><img src="{{ i.image.url }}" style="width: 600px; height: 500px" alt=""></a>
+                    <h1>{{ i.title }}</h1>
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
